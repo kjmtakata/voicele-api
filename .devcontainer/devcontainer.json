@@ -1,0 +1,21 @@
+{
+	"name": "Python 3",
+	"image": "python:3.10-bullseye",
+	"settings": {
+		"editor.rulers": [
+			88
+		],
+		"editor.formatOnSave": true,
+		"python.formatting.provider": "black",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
+	},
+	"forwardPorts": [
+		3001
+	],
+	"postStartCommand": "pip install -r requirements.txt -r requirements-dev.txt",
+	"extensions": [
+		"ms-python.python"
+	]
+}
