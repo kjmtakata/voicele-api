@@ -5,11 +5,14 @@ import string
 
 import bs4
 import flask
+import flask_cors
 import flask_restful
 import requests
 
 app = flask.Flask(__name__)
 api = flask_restful.Api(app)
+flask_cors.CORS(app, resources={r"/*": {"origins": "*"}})
+
 BASE_URL = "https://quizmasters.biz/DB/Audio/Voices"
 
 
