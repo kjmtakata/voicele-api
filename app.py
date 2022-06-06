@@ -31,7 +31,7 @@ class Answer(flask_restful.Resource):
 
 class OptionList(flask_restful.Resource):
     def get(self):
-        return [get_name(link) for link in get_links()]
+        return sorted(list({get_name(link) for link in get_links()}))
 
 
 def get_links():
